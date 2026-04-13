@@ -1,90 +1,66 @@
-/* Custom Background and Fonts */
-body {
-    background-color: #101010; /* Requirement: Custom background color */
-    color: #ffffff; /* Requirement: Font color */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Requirement: Font family */
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blitzburgh: A From-Scratch Story</title>
+    <link rel="stylesheet" href="scratch-styles.css">
+</head>
+<body>
 
-/* Requirement: 3 Divs for positioning/styling */
+    <nav>
+        <a href="index.html">Back to Professional Site</a> | 
+        <a href="#video-section">Jump to Documentary</a> |
+        <a href="app.html">Launch Mini-App</a>
+    </nav>
 
-/* Block 1: Navigation */
-nav {
-    background-color: #FFB81C; /* Steelers Gold */
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <div id="hero-section">
+        <h1>The 1994 Blitzburgh Defense</h1>
+        <p>A study in defensive innovation and the "Fire Zone" blitz.</p>
+    </div>
 
-.nav-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
+    <div id="content-block">
+        <h2>The Legendary Lineup</h2>
+        <p>The defense was built on a specific hierarchy of talent:</p>
+        
+        <ol>
+            <li><strong>The Four Horsemen (Linebackers)</strong>
+                <ul>
+                    <li>Kevin Greene (Outside)</li>
+                    <li>Greg Lloyd (Outside)</li>
+                    <li>Chad Brown (Inside/Outside)</li>
+                    <li>Levon Kirkland (Inside)</li>
+                </ul>
+            </li>
+            <li><strong>The Secondary</strong>
+                <ul>
+                    <li>Rod Woodson (Hall of Fame Cornerback)</li>
+                    <li>Carnell Lake (Safety)</li>
+                </ul>
+            </li>
+        </ol>
 
-nav a {
-    color: #101010;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px;
-}
+        <img src="https://example.com/steelers-logo.png" alt="Steelers Logo" style="width:200px;">
+    </div>
 
-/* Block 2: Hero Section */
-.hero-block {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    <div id="video-section">
+        <h2>Birth of Blitzburgh Documentary</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vq4N2QMvf_8" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-/* Block 3: Content Cards */
-.content-card {
-    background-color: #1e1e1e;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 40px;
-    border-radius: 8px;
-    border-left: 5px solid #FFB81C;
-}
+    <div id="graph-section">
+        <h2>Interactive Data Visualization</h2>
+        <div class='tableauPlaceholder' id='viz12345' style='position: relative'>
+            <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='NFLStats/DefenseDashboard' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+    </div>
 
-/* Additional Styles */
-h1 { font-size: 3rem; color: #FFB81C; margin: 0; }
-h2 { color: #FFB81C; border-bottom: 1px solid #444; padding-bottom: 10px; }
-
-.feature-img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin: 20px 0;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-}
-
-.anchor-link {
-    background-color: #FFB81C;
-    color: #101010;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 30px;
-    margin-top: 20px;
-    font-weight: bold;
-}
+</body>
+</html>
