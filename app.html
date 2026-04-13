@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steelers QB Challenge</title>
+    <style>
+        body { background: #101010; color: white; font-family: sans-serif; text-align: center; }
+        .game-box { max-width: 500px; margin: 50px auto; padding: 30px; border: 2px solid #FFB81C; border-radius: 15px; }
+        input { padding: 10px; width: 200px; border-radius: 5px; border: none; }
+        button { padding: 10px 20px; background: #FFB81C; border: none; cursor: pointer; font-weight: bold; }
+        #feedback { margin-top: 20px; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+    <div class="game-box">
+        <h1>QB Guessing Game</h1>
+        <p>Name a Steelers QB who has won a Super Bowl:</p>
+        <input type="text" id="userGuess" placeholder="Enter last name...">
+        <button onclick="checkQB()">Check Answer</button>
+        <div id="feedback"></div>
+        <br>
+        <a href="scratch.html" style="color: #FFB81C;">Return to Hub</a>
+    </div>
+
+    <script>
+        function checkQB() {
+            const winners = ['roethlisberger', 'bradshaw'];
+            const guess = document.getElementById('userGuess').value.toLowerCase().trim();
+            const feedback = document.getElementById('feedback');
+
+            if (winners.includes(guess)) {
+                feedback.innerHTML = "🏆 Correct! He brought home the Lombardi.";
+                feedback.style.color = "#FFB81C";
+            } else {
+                feedback.innerHTML = "❌ Not quite. Think about the 70s or the mid-2000s!";
+                feedback.style.color = "#ef4444";
+            }
+        }
+    </script>
+</body>
+</html>
