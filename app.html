@@ -2,41 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tyler's CM Simulator</title>
+    <title>Steelers QB Challenge</title>
     <style>
-        body { background: #101820; color: #FFB81C; font-family: sans-serif; text-align: center; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .app-card { background: #222; border: 3px solid #FFB81C; padding: 40px; border-radius: 20px; box-shadow: 0 0 20px rgba(255,184,28,0.2); width: 400px; }
-        .progress-container { background: #444; height: 25px; border-radius: 15px; margin: 20px 0; overflow: hidden; }
-        #progress-bar { background: #FFB81C; width: 0%; height: 100%; transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        button { background: #FFB81C; color: #101820; border: none; padding: 15px 30px; font-weight: bold; border-radius: 30px; cursor: pointer; font-size: 1rem; }
-        button:active { transform: scale(0.95); }
-        .back-link { display: block; margin-top: 20px; color: white; text-decoration: none; font-size: 0.8rem; }
+        body { background: #101010; color: white; font-family: sans-serif; text-align: center; }
+        .game-box { max-width: 500px; margin: 50px auto; padding: 30px; border: 2px solid #FFB81C; border-radius: 15px; }
+        input { padding: 10px; width: 200px; border-radius: 5px; border: none; }
+        button { padding: 10px 20px; background: #FFB81C; border: none; cursor: pointer; font-weight: bold; }
+        #feedback { margin-top: 20px; font-size: 1.2rem; }
     </style>
 </head>
 <body>
-    <div class="app-card">
-        <h1>Project Manager Sim</h1>
-        <p>Tyler, click to finish the BYU stadium before the deadline!</p>
-        <div class="progress-container"><div id="progress-bar"></div></div>
-        <div id="status">Project Completion: 0%</div>
+    <div class="game-box">
+        <h1>QB Guessing Game</h1>
+        <p>Name a Steelers QB who has won a Super Bowl:</p>
+        <input type="text" id="userGuess" placeholder="Enter last name...">
+        <button onclick="checkQB()">Check Answer</button>
+        <div id="feedback"></div>
         <br>
-        <button onclick="advanceProject()">Execute Phase</button>
-        <p id="msg"></p>
-        <a href="index.html" class="back-link">← Return to Main Page</a>
+        <a href="scratch.html" style="color: #FFB81C;">Return to Hub</a>
     </div>
 
     <script>
-        let progress = 0;
-        function advanceProject() {
-            if (progress < 100) {
-                progress += Math.floor(Math.random() * 15) + 5;
-                if (progress > 100) progress = 100;
-                document.getElementById('progress-bar').style.width = progress + '%';
-                document.getElementById('status').innerText = `Project Completion: ${progress}%`;
-                
-                if (progress === 100) {
-                    document.getElementById('msg').innerText = "🏗️ SUCCESS! Project built on time and under budget!";
-                }
+        function checkQB() {
+            const winners = ['roethlisberger', 'bradshaw'];
+            const guess = document.getElementById('userGuess').value.toLowerCase().trim();
+            const feedback = document.getElementById('feedback');
+
+            if (winners.includes(guess)) {
+                feedback.innerHTML = "🏆 Correct! He brought home the Lombardi.";
+                feedback.style.color = "#FFB81C";
+            } else {
+                feedback.innerHTML = "❌ Not quite. Think about the 70s or the mid-2000s!";
+                feedback.style.color = "#ef4444";
             }
         }
     </script>
