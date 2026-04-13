@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel City Football | Pittsburgh Steelers Fan Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <span class="logo">STEEL CITY HUB</span>
+            <div>
+                <a href="index.html">Professional Portfolio</a>
+                <a href="app.html">Interactive Trivia</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="top" class="hero-block">
+        <h1>Six-Time Super Bowl Champions</h1>
+        <p>The history, the curtain, and the future of the Pittsburgh Steelers.</p>
+        <a href="#stats" class="anchor-link">View Season Analytics</a>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="content-card">
+            <h2>The Steel Curtain Legacy</h2>
+            <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390" alt="Football Stadium Lights" class="feature-img">
+            
+            <h3>Championship Breakdown</h3>
+            <ol>
+                <li>The 1970s Dynasty
+                    <ul>
+                        <li>Super Bowl IX (1974)</li>
+                        <li>Super Bowl X (1975)</li>
+                        <li>Super Bowl XIII (1978)</li>
+                    </ul>
+                </li>
+                <li>The Modern Era
+                    <ul>
+                        <li>Super Bowl XL (2005)</li>
+                        <li>Super Bowl XLIII (2008)</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="content-card">
+            <h2>Game Highlights</h2>
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SshZ5m_qS18" title="Steelers Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="stats" class="content-card">
+            <h2>Interactive Performance Data</h2>
+            <div class='tableauPlaceholder' id='viz1712950000000' style='position: relative'>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> 
+                    <param name='site_root' value='' />
+                    <param name='name' value='NFLPlayerStats/Dashboard' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1712950000000');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Steelers Fan Project | <a href="#top">Back to Top</a></p>
+    </footer>
+
+</body>
+</html>
