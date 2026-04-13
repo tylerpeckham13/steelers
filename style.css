@@ -1,66 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blitzburgh: A From-Scratch Story</title>
-    <link rel="stylesheet" href="scratch-styles.css">
-</head>
-<body>
+/* Requirement: Custom background color */
+body {
+    background-color: #002e5d; /* BYU Navy Blue */
+    margin: 0;
+    padding: 0;
+    /* Requirement: Style that specifies font family */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <nav>
-        <a href="index.html">Back to Professional Site</a> | 
-        <a href="#video-section">Jump to Documentary</a> |
-        <a href="app.html">Launch Mini-App</a>
-    </nav>
+/* Requirement: Style that specifies font color */
+h1, h2, h3 {
+    color: #FFB81C; /* Steelers Gold */
+    text-align: center;
+}
 
-    <div id="hero-section">
-        <h1>The 1994 Blitzburgh Defense</h1>
-        <p>A study in defensive innovation and the "Fire Zone" blitz.</p>
-    </div>
+p, li {
+    color: #FFFFFF; /* White text for readability */
+}
 
-    <div id="content-block">
-        <h2>The Legendary Lineup</h2>
-        <p>The defense was built on a specific hierarchy of talent:</p>
-        
-        <ol>
-            <li><strong>The Four Horsemen (Linebackers)</strong>
-                <ul>
-                    <li>Kevin Greene (Outside)</li>
-                    <li>Greg Lloyd (Outside)</li>
-                    <li>Chad Brown (Inside/Outside)</li>
-                    <li>Levon Kirkland (Inside)</li>
-                </ul>
-            </li>
-            <li><strong>The Secondary</strong>
-                <ul>
-                    <li>Rod Woodson (Hall of Fame Cornerback)</li>
-                    <li>Carnell Lake (Safety)</li>
-                </ul>
-            </li>
-        </ol>
+/* Requirement: At least three divs for positioning/styling */
+#personal-section {
+    background-color: #FFB81C;
+    padding: 60px 20px;
+    border-bottom: 5px solid white;
+}
 
-        <img src="https://example.com/steelers-logo.png" alt="Steelers Logo" style="width:200px;">
-    </div>
+#personal-section h1, #personal-section h3, #personal-section p {
+    color: #101820; /* Dark text for the Gold header */
+}
 
-    <div id="video-section">
-        <h2>Birth of Blitzburgh Documentary</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vq4N2QMvf_8" frameborder="0" allowfullscreen></iframe>
-    </div>
+#hobby-section {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #101820; /* Steelers Black */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+}
 
-    <div id="graph-section">
-        <h2>Interactive Data Visualization</h2>
-        <div class='tableauPlaceholder' id='viz12345' style='position: relative'>
-            <object class='tableauViz'  style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='embed_code_version' value='3' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='NFLStats/DefenseDashboard' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-            </object>
-        </div>
-        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-    </div>
+#stats-anchor {
+    padding: 50px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
 
-</body>
-</html>
+/* Requirement: At least 4 style definitions (adding nav and img) */
+nav {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #FFB81C;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.project-img {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+}
+
+.back-link {
+    color: #002e5d;
+    font-weight: bold;
+}
