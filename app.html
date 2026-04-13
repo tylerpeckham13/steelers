@@ -2,38 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Steelers QB Challenge</title>
+    <title>Tyler's Blitzburgh App</title>
     <style>
-        body { background: #101010; color: white; font-family: sans-serif; text-align: center; }
-        .game-box { max-width: 500px; margin: 50px auto; padding: 30px; border: 2px solid #FFB81C; border-radius: 15px; }
-        input { padding: 10px; width: 200px; border-radius: 5px; border: none; }
-        button { padding: 10px 20px; background: #FFB81C; border: none; cursor: pointer; font-weight: bold; }
-        #feedback { margin-top: 20px; font-size: 1.2rem; }
+        body { background: #101820; color: #FFB81C; font-family: sans-serif; text-align: center; padding: 50px; }
+        .game-container { border: 5px solid #FFB81C; padding: 40px; border-radius: 20px; background: #222; display: inline-block; }
+        .stat-box { font-size: 24px; margin-bottom: 20px; }
+        button { background: #FFB81C; color: #101820; border: none; padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+        #progress-bar { width: 300px; height: 30px; background: #444; margin: 20px auto; border-radius: 15px; overflow: hidden; }
+        #progress-fill { height: 100%; width: 0%; background: #FFB81C; transition: width 0.3s; }
     </style>
 </head>
 <body>
-    <div class="game-box">
-        <h1>QB Guessing Game</h1>
-        <p>Name a Steelers QB who has won a Super Bowl:</p>
-        <input type="text" id="userGuess" placeholder="Enter last name...">
-        <button onclick="checkQB()">Check Answer</button>
-        <div id="feedback"></div>
+    <div class="game-container">
+        <h1>Stadium Builder Sim</h1>
+        <p>Coach Tyler, build the stadium before the clock runs out!</p>
+        
+        <div class="stat-box">Project Completion: <span id="percent">0</span>%</div>
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        
+        <button onclick="build()">Lay Foundations / Send Blitz</button>
+        
+        <p id="status-msg"></p>
         <br>
-        <a href="scratch.html" style="color: #FFB81C;">Return to Hub</a>
+        <a href="scratch.html" style="color:white; text-decoration:none;">← Back to Scratch Page</a>
     </div>
 
     <script>
-        function checkQB() {
-            const winners = ['roethlisberger', 'bradshaw'];
-            const guess = document.getElementById('userGuess').value.toLowerCase().trim();
-            const feedback = document.getElementById('feedback');
-
-            if (winners.includes(guess)) {
-                feedback.innerHTML = "🏆 Correct! He brought home the Lombardi.";
-                feedback.style.color = "#FFB81C";
-            } else {
-                feedback.innerHTML = "❌ Not quite. Think about the 70s or the mid-2000s!";
-                feedback.style.color = "#ef4444";
+        let completion = 0;
+        function build() {
+            if (completion < 100) {
+                let gain = Math.floor(Math.random() * 15) + 5;
+                completion += gain;
+                if (completion > 100) completion = 100;
+                
+                document.getElementById('percent').innerText = completion;
+                document.getElementById('progress-fill').style.width = completion + "%";
+                document.getElementById('status-msg').innerText = "Construction Crew and Linebackers are working hard!";
+                
+                if (completion === 100) {
+                    document.getElementById('status-msg').innerText = "🏗️ PROJECT COMPLETE! Stadium built and Blitzburgh defense is ready!";
+                }
             }
         }
     </script>
