@@ -2,45 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tyler's Blitzburgh App</title>
+    <title>Tyler's Build & Blitz Sim</title>
     <style>
         body { background: #101820; color: #FFB81C; font-family: sans-serif; text-align: center; padding: 50px; }
-        .game-container { border: 5px solid #FFB81C; padding: 40px; border-radius: 20px; background: #222; display: inline-block; }
-        .stat-box { font-size: 24px; margin-bottom: 20px; }
+        .sim-card { border: 5px solid #FFB81C; padding: 40px; border-radius: 20px; background: #222; display: inline-block; }
+        #progress-container { width: 300px; height: 30px; background: #444; margin: 20px auto; border-radius: 15px; overflow: hidden; }
+        #bar { height: 100%; width: 0%; background: #FFB81C; transition: width 0.4s; }
         button { background: #FFB81C; color: #101820; border: none; padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 5px; }
-        #progress-bar { width: 300px; height: 30px; background: #444; margin: 20px auto; border-radius: 15px; overflow: hidden; }
-        #progress-fill { height: 100%; width: 0%; background: #FFB81C; transition: width 0.3s; }
     </style>
 </head>
 <body>
-    <div class="game-container">
-        <h1>Stadium Builder Sim</h1>
-        <p>Coach Tyler, build the stadium before the clock runs out!</p>
+    <div class="sim-card">
+        <h1>BYU Construction Sim</h1>
+        <p>Tyler Peckham, manage the Fountain Green stadium build!</p>
         
-        <div class="stat-box">Project Completion: <span id="percent">0</span>%</div>
-        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <div id="progress-container"><div id="bar"></div></div>
+        <p>Project Completion: <span id="percent">0</span>%</p>
         
-        <button onclick="build()">Lay Foundations / Send Blitz</button>
+        <button onclick="work()">Execute Project Phase</button>
         
-        <p id="status-msg"></p>
+        <p id="msg"></p>
         <br>
-        <a href="scratch.html" style="color:white; text-decoration:none;">← Back to Scratch Page</a>
+        <a href="index.html" style="color:white; text-decoration:none;">← Back to Main Page</a>
     </div>
 
     <script>
-        let completion = 0;
-        function build() {
-            if (completion < 100) {
-                let gain = Math.floor(Math.random() * 15) + 5;
-                completion += gain;
-                if (completion > 100) completion = 100;
+        let progress = 0;
+        function work() {
+            if (progress < 100) {
+                progress += Math.floor(Math.random() * 20) + 5;
+                if (progress > 100) progress = 100;
+                document.getElementById('bar').style.width = progress + "%";
+                document.getElementById('percent').innerText = progress;
+                document.getElementById('msg').innerText = "Laying foundations and sending the blitz!";
                 
-                document.getElementById('percent').innerText = completion;
-                document.getElementById('progress-fill').style.width = completion + "%";
-                document.getElementById('status-msg').innerText = "Construction Crew and Linebackers are working hard!";
-                
-                if (completion === 100) {
-                    document.getElementById('status-msg').innerText = "🏗️ PROJECT COMPLETE! Stadium built and Blitzburgh defense is ready!";
+                if (progress === 100) {
+                    document.getElementById('msg').innerText = "🏗️ PROJECT FINISHED! The Blitzburgh Stadium is complete!";
                 }
             }
         }
