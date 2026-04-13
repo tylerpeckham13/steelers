@@ -1,54 +1,66 @@
-/* Requirement: Custom background color */
-body {
-    background-color: #101820; /* Steelers Black */
-    margin: 0;
-    padding: 0;
-    /* Requirement: Font family */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tyler Peckham | BYU Construction Management</title>
+    <link rel="stylesheet" href="scratch-styles.css">
+</head>
+<body>
 
-/* Requirement: Font color */
-h1, h2 {
-    color: #FFB81C; /* Steelers Gold */
-    text-transform: uppercase;
-}
+    <nav>
+        <a href="index.html">Professional Portfolio</a> | 
+        <a href="#stats-anchor">Jump to Blitzburgh Stats</a> |
+        <a href="app.html">Launch Mini-App</a>
+    </nav>
 
-p, li {
-    color: #FFFFFF;
-}
+    <div id="top-page"></div>
 
-/* Requirement: Three divs for positioning */
-#hero-section {
-    padding: 60px;
-    text-align: center;
-    background-image: linear-gradient(to bottom, #FFB81C, #101820);
-    color: #101820;
-}
+    <div id="personal-section">
+        <h1>Tyler Peckham</h1>
+        <h3>BYU Freshman | Construction Management</h3>
+        <p>Originally from <strong>Fountain Green, Utah</strong>, I am currently studying how to build the future at BYU. 
+        Whether it's a job site or a football field, success starts with a solid foundation.</p>
+    </div>
 
-#content-block {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #222;
-    padding: 30px;
-    border-radius: 10px;
-}
+    <div id="hobby-section">
+        <h2>Passion Project: The Birth of Blitzburgh</h2>
+        
+        <ol>
+            <li><strong>Phase 1: The Blueprint (1994)</strong>
+                <ul>
+                    <li>Architect: Dick LeBeau</li>
+                    <li>Design: The Zone Blitz</li>
+                </ul>
+            </li>
+            <li><strong>Phase 2: The Foundation (The Players)</strong>
+                <ul>
+                    <li>Kevin Greene & Greg Lloyd</li>
+                    <li>Carnell Lake & Rod Woodson</li>
+                </ul>
+            </li>
+        </ol>
 
-#video-section, #graph-section {
-    padding: 40px;
-    text-align: center;
-    border-top: 2px solid #FFB81C;
-}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Steelers_logo.svg" alt="Steelers Logo" class="project-img">
 
-nav {
-    background: #FFB81C;
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vq4N2QMvf_8" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
 
-nav a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #101820;
-}
+    <div id="stats-anchor">
+        <h2>Project Data: Blitzburgh Success Rates</h2>
+        
+        <div class='tableauPlaceholder' style='position: relative; margin: 0 auto;'>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='name' value='NFLStats/DefenseDashboard' />
+            </object>
+        </div>
+        <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+
+        <p><a href="#top-page" class="back-link">Return to Top of Page</a></p>
+    </div>
+
+</body>
+</html>
