@@ -3,68 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyler Peckham | BYU Construction Management</title>
+    <title>Blitzburgh | The Steel Tradition</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="nav-container">
-            <a href="#top">Home</a>
-            <a href="#blitzburgh-history">The Blitzburgh Era</a>
-            <a href="#data-viz">Analytics</a>
-            <a href="app.html">Launch App</a>
+        <div class="nav-links">
+            <a href="bio.html">About the Creator</a>
+            <a href="#history">Defense History</a>
+            <a href="#stats">Live Stats</a>
+            <a href="app.html" class="app-btn">Sack Sim</a>
         </div>
     </nav>
 
-    <header id="top">
-        <div class="hero-overlay">
-            <h1>Tyler Peckham</h1>
-            <h3>Construction Management | BYU Freshman</h3>
-            <p>From Fountain Green, Utah to the Future of Construction</p>
+    <header id="top" class="steelers-hero">
+        <div class="hero-content">
+            <h1>Blitzburgh</h1>
+            <p>The Engineering of a Defensive Dynasty</p>
         </div>
     </header>
 
     <main>
-        <section id="blitzburgh-history" class="content-block">
-            <h2>The Blueprint: Birth of Blitzburgh</h2>
-            <p>In 1994, the Steelers pioneered the "Zone Blitz." Just like a construction project, it required a flawless foundation.</p>
+        <section id="history" class="card">
+            <h2>The Zone Blitz Blueprint</h2>
+            <p>The 1994 season redefined NFL defense. Led by Dick LeBeau, the Steelers "constructed" a scheme that confused the greatest quarterbacks in history.</p>
             
-            <div class="list-container">
+            <div class="list-wrapper">
                 <ol>
-                    <li><strong>Structural Personnel</strong>
+                    <li><strong>Defensive Architects</strong>
                         <ul>
-                            <li>Kevin Greene (OLB)</li>
-                            <li>Greg Lloyd (OLB)</li>
+                            <li>Dick LeBeau (Defensive Coordinator)</li>
+                            <li>Bill Cowher (Head Coach)</li>
                         </ul>
                     </li>
-                    <li><strong>Secondary Support</strong>
+                    <li><strong>The Four Horsemen (Linebackers)</strong>
                         <ul>
-                            <li>Rod Woodson (CB)</li>
-                            <li>Carnell Lake (S)</li>
+                            <li>Kevin Greene (14 Sacks)</li>
+                            <li>Greg Lloyd (10 Sacks)</li>
+                            <li>Chad Brown (8.5 Sacks)</li>
+                            <li>Levon Kirkland</li>
                         </ul>
                     </li>
                 </ol>
             </div>
 
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Steelers_logo.svg" alt="Steelers Official Logo" class="feature-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Steelers_logo.svg" alt="Pittsburgh Steelers Logo" class="center-img">
 
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/vq4N2QMvf_8" title="Steelers Story" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/vq4N2QMvf_8" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
-        <section id="data-viz" class="content-block">
-            <h2>Defense Performance Analytics</h2>
-            <div class='tableauPlaceholder' id='viz1712990' style='position: relative'>
-                <object class='tableauViz' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                    <param name='name' value='NFLStats/DefenseDashboard' />
-                </object>
+        <section id="stats" class="card">
+            <h2>Interactive Performance Analytics</h2>
+            <div class="tableau-box">
+                <div class='tableauPlaceholder' style='position: relative'>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='name' value='NFLStats/DefenseDashboard' />
+                    </object>
+                </div>
+                <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
             </div>
-            <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-            
-            <p><a href="#top" class="top-link">↑ Back to Top</a></p>
+            <a href="#top" class="back-to-top">Return to Top</a>
         </section>
     </main>
 
