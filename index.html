@@ -2,52 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tyler Peckham | BYU Construction Management</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <a href="#bio-section">About Tyler</a> | 
-        <a href="#video-section">Blitzburgh History</a> |
-        <a href="app.html">Defensive Simulator</a>
+        <div class="nav-container">
+            <a href="#top">Home</a>
+            <a href="#blitzburgh-history">The Blitzburgh Era</a>
+            <a href="#data-viz">Analytics</a>
+            <a href="app.html">Launch App</a>
+        </div>
     </nav>
 
-    <div id="top"></div>
-
-    <div id="bio-section" class="content-box">
-        <h1>Tyler Peckham</h1>
-        <p><strong>Freshman at BYU | Construction Management</strong></p>
-        <p>Hailing from <em>Fountain Green, Utah</em>, I am applying the same precision used in construction to my study of legendary sports strategies.</p>
-    </div>
-
-    <div id="video-section" class="content-box">
-        <h2>The 1994 Blitzburgh Defense</h2>
-        
-        <ol>
-            <li><strong>Core Strategy</strong>
-                <ul>
-                    <li>The Zone Blitz Blueprint</li>
-                    <li>Designed by Dick LeBeau</li>
-                </ul>
-            </li>
-            <li><strong>Key Personnel</strong>
-                <ul>
-                    <li>Kevin Greene & Greg Lloyd</li>
-                    <li>Rod Woodson & Carnell Lake</li>
-                </ul>
-            </li>
-        </ol>
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Steelers_logo.svg" alt="Steelers Logo" class="logo">
-        <div class="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/vq4N2QMvf_8" frameborder="0" allowfullscreen></iframe>
+    <header id="top">
+        <div class="hero-overlay">
+            <h1>Tyler Peckham</h1>
+            <h3>Construction Management | BYU Freshman</h3>
+            <p>From Fountain Green, Utah to the Future of Construction</p>
         </div>
-    </div>
+    </header>
 
-    <div id="data-section" class="content-box">
-        <h2>Performance Analytics</h2>
-        <div class='tableauPlaceholder' style='position: relative; margin: 0 auto;'>
-            <object class='tableauViz' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='name' value='NFLStats/Defense
+    <main>
+        <section id="blitzburgh-history" class="content-block">
+            <h2>The Blueprint: Birth of Blitzburgh</h2>
+            <p>In 1994, the Steelers pioneered the "Zone Blitz." Just like a construction project, it required a flawless foundation.</p>
+            
+            <div class="list-container">
+                <ol>
+                    <li><strong>Structural Personnel</strong>
+                        <ul>
+                            <li>Kevin Greene (OLB)</li>
+                            <li>Greg Lloyd (OLB)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Secondary Support</strong>
+                        <ul>
+                            <li>Rod Woodson (CB)</li>
+                            <li>Carnell Lake (S)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Steelers_logo.svg" alt="Steelers Official Logo" class="feature-image">
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/vq4N2QMvf_8" title="Steelers Story" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="data-viz" class="content-block">
+            <h2>Defense Performance Analytics</h2>
+            <div class='tableauPlaceholder' id='viz1712990' style='position: relative'>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='name' value='NFLStats/DefenseDashboard' />
+                </object>
+            </div>
+            <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+            
+            <p><a href="#top" class="top-link">↑ Back to Top</a></p>
+        </section>
+    </main>
+
+</body>
+</html>
