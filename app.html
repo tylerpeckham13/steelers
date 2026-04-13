@@ -2,42 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tyler's Build & Blitz Sim</title>
+    <title>Tyler's CM Simulator</title>
     <style>
-        body { background: #101820; color: #FFB81C; font-family: sans-serif; text-align: center; padding: 50px; }
-        .sim-card { border: 5px solid #FFB81C; padding: 40px; border-radius: 20px; background: #222; display: inline-block; }
-        #progress-container { width: 300px; height: 30px; background: #444; margin: 20px auto; border-radius: 15px; overflow: hidden; }
-        #bar { height: 100%; width: 0%; background: #FFB81C; transition: width 0.4s; }
-        button { background: #FFB81C; color: #101820; border: none; padding: 15px 30px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+        body { background: #101820; color: #FFB81C; font-family: sans-serif; text-align: center; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .app-card { background: #222; border: 3px solid #FFB81C; padding: 40px; border-radius: 20px; box-shadow: 0 0 20px rgba(255,184,28,0.2); width: 400px; }
+        .progress-container { background: #444; height: 25px; border-radius: 15px; margin: 20px 0; overflow: hidden; }
+        #progress-bar { background: #FFB81C; width: 0%; height: 100%; transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        button { background: #FFB81C; color: #101820; border: none; padding: 15px 30px; font-weight: bold; border-radius: 30px; cursor: pointer; font-size: 1rem; }
+        button:active { transform: scale(0.95); }
+        .back-link { display: block; margin-top: 20px; color: white; text-decoration: none; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <div class="sim-card">
-        <h1>BYU Construction Sim</h1>
-        <p>Tyler Peckham, manage the Fountain Green stadium build!</p>
-        
-        <div id="progress-container"><div id="bar"></div></div>
-        <p>Project Completion: <span id="percent">0</span>%</p>
-        
-        <button onclick="work()">Execute Project Phase</button>
-        
-        <p id="msg"></p>
+    <div class="app-card">
+        <h1>Project Manager Sim</h1>
+        <p>Tyler, click to finish the BYU stadium before the deadline!</p>
+        <div class="progress-container"><div id="progress-bar"></div></div>
+        <div id="status">Project Completion: 0%</div>
         <br>
-        <a href="index.html" style="color:white; text-decoration:none;">← Back to Main Page</a>
+        <button onclick="advanceProject()">Execute Phase</button>
+        <p id="msg"></p>
+        <a href="index.html" class="back-link">← Return to Main Page</a>
     </div>
 
     <script>
         let progress = 0;
-        function work() {
+        function advanceProject() {
             if (progress < 100) {
-                progress += Math.floor(Math.random() * 20) + 5;
+                progress += Math.floor(Math.random() * 15) + 5;
                 if (progress > 100) progress = 100;
-                document.getElementById('bar').style.width = progress + "%";
-                document.getElementById('percent').innerText = progress;
-                document.getElementById('msg').innerText = "Laying foundations and sending the blitz!";
+                document.getElementById('progress-bar').style.width = progress + '%';
+                document.getElementById('status').innerText = `Project Completion: ${progress}%`;
                 
                 if (progress === 100) {
-                    document.getElementById('msg').innerText = "🏗️ PROJECT FINISHED! The Blitzburgh Stadium is complete!";
+                    document.getElementById('msg').innerText = "🏗️ SUCCESS! Project built on time and under budget!";
                 }
             }
         }
