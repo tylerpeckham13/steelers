@@ -1,69 +1,95 @@
-/* Requirement: Custom background color */
+/* Requirement: Custom background color and font family */
+:root {
+    --byu-navy: #002e5d;
+    --steelers-gold: #FFB81C;
+    --steelers-black: #101820;
+}
+
 body {
-    background-color: #002e5d; /* BYU Navy */
+    background-color: var(--byu-navy);
     margin: 0;
-    padding: 0;
-    /* Requirement: Style specifying font family */
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: white;
+    line-height: 1.6;
 }
 
 /* Requirement: Style specifying font color */
-h1, h2 {
-    color: #FFB81C; /* Steelers Gold */
-    text-align: center;
+h1, h2, h3 {
+    color: var(--steelers-gold);
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Requirement: At least three divs for positioning/styling */
-.content-box {
-    width: 85%;
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-#bio-section {
-    background-color: #FFB81C;
-    color: #101820;
-    text-align: center;
-    border: 4px solid white;
-}
-
-#video-section {
-    background-color: #101820; /* Steelers Black */
-    border: 2px solid #FFB81C;
-}
-
-#data-section {
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-}
-
-/* Requirement: Additional style definitions */
 nav {
-    background: #111;
-    padding: 15px;
-    text-align: center;
+    background-color: var(--steelers-black);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--steelers-gold);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav a {
-    color: #FFB81C;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 15px;
+    transition: color 0.3s;
 }
 
-.logo {
+nav a:hover {
+    color: var(--steelers-gold);
+}
+
+header {
+    height: 40vh;
+    background: linear-gradient(rgba(0,46,93,0.8), rgba(16,24,32,0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-block {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border-left: 5px solid var(--steelers-gold);
+}
+
+.feature-image {
+    width: 200px;
     display: block;
     margin: 20px auto;
-    width: 150px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
 }
 
-.anchor-link {
-    color: #002e5d;
-    font-weight: bold;
-    text-decoration: underline;
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.top-link {
+    color: var(--steelers-gold);
+    text-decoration: none;
+    font-size: 0.9rem;
 }
