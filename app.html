@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Steelers QB Challenge</title>
+    <title>Blitzburgh Sack Simulator</title>
     <style>
-        body { background: #101010; color: white; font-family: sans-serif; text-align: center; }
-        .game-box { max-width: 500px; margin: 50px auto; padding: 30px; border: 2px solid #FFB81C; border-radius: 15px; }
-        input { padding: 10px; width: 200px; border-radius: 5px; border: none; }
-        button { padding: 10px 20px; background: #FFB81C; border: none; cursor: pointer; font-weight: bold; }
-        #feedback { margin-top: 20px; font-size: 1.2rem; }
+        body { text-align: center; background: #101820; color: white; font-family: sans-serif; padding-top: 50px; }
+        #game-box { border: 5px solid #FFB81C; display: inline-block; padding: 40px; border-radius: 20px; }
+        .stat { font-size: 24px; margin: 10px; }
+        button { background: #FFB81C; border: none; padding: 15px 25px; font-size: 18px; cursor: pointer; border-radius: 5px; }
     </style>
 </head>
 <body>
-    <div class="game-box">
-        <h1>QB Guessing Game</h1>
-        <p>Name a Steelers QB who has won a Super Bowl:</p>
-        <input type="text" id="userGuess" placeholder="Enter last name...">
-        <button onclick="checkQB()">Check Answer</button>
-        <div id="feedback"></div>
+    <div id="game-box">
+        <h1>Sack Simulator</h1>
+        <p>Can you beat the '94 record of 55 sacks?</p>
+        <div class="stat">Current Sacks: <span id="sackCount">0</span></div>
+        <div class="stat">Games Left: <span id="gamesLeft">16</span></div>
+        <button onclick="playGame()">Send the Blitz!</button>
+        <p id="message"></p>
         <br>
-        <a href="scratch.html" style="color: #FFB81C;">Return to Hub</a>
+        <a href="blitzburgh.html" style="color:#FFB81C;">Back to Main Page</a>
     </div>
 
     <script>
-        function checkQB() {
-            const winners = ['roethlisberger', 'bradshaw'];
-            const guess = document.getElementById('userGuess').value.toLowerCase().trim();
-            const feedback = document.getElementById('feedback');
+        let sacks = 0;
+        let games = 16;
 
-            if (winners.includes(guess)) {
-                feedback.innerHTML = "🏆 Correct! He brought home the Lombardi.";
-                feedback.style.color = "#FFB81C";
-            } else {
-                feedback.innerHTML = "❌ Not quite. Think about the 70s or the mid-2000s!";
-                feedback.style.color = "#ef4444";
+        function playGame() {
+            if (games > 0) {
+                let roundSacks = Math.floor(Math.random() * 6); // Random 0-5 sacks
+                sacks += roundSacks;
+                games--;
+                document.getElementById('sackCount').innerText = sacks;
+                document.getElementById('gamesLeft').innerText = games;
+                
+                if (games === 0) {
+                    let msg = sacks >= 55 ? "LEGENDARY! You broke the record!" : "Good effort, but the '94 team is still King.";
+                    document.getElementById('message').innerText = msg;
+                }
             }
         }
     </script>
