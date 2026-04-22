@@ -1,9 +1,109 @@
-<section class="resume-section">
-    <h2>Resume</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tyler Peckham Portfolio</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: black;
+            color: white;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid gold;
+        }
+
+        .navbar a {
+            color: gold;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: gold;
+        }
+
+        /* RESUME SECTION */
+        .resume-section {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .resume-card {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 25px;
+            width: 80%;
+            max-width: 700px;
+            border: 1px solid gold;
+        }
+
+        .resume-card h3 {
+            color: gold;
+        }
+
+        .resume-block {
+            margin-bottom: 20px;
+        }
+
+        .resume-block h4 {
+            color: gold;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+        }
+
+        .skills li {
+            list-style: none;
+            background-color: gold;
+            color: black;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="app.html">Trivia Game</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <h1>Tyler Peckham</h1>
+</header>
+
+<!-- RESUME -->
+<section class="resume-section">
     <div class="resume-card">
-        <h3>Tyler Peckham</h3>
-        <p class="subtitle">Construction Management Student | Brigham Young University</p>
+
+        <h3>Construction Management Student | BYU</h3>
 
         <div class="resume-block">
             <h4>Education</h4>
@@ -14,34 +114,34 @@
         <div class="resume-block">
             <h4>Work Experience</h4>
 
-            <div class="job">
-                <p><strong>Construction Worker</strong></p>
-                <ul>
-                    <li>Worked long hours in physically demanding environments</li>
-                    <li>Maintained clean and organized job sites</li>
-                    <li>Collaborated with team members to complete projects efficiently</li>
-                </ul>
-            </div>
+            <p><strong>Construction Worker</strong></p>
+            <ul>
+                <li>Worked long hours in demanding environments</li>
+                <li>Maintained clean and organized job sites</li>
+                <li>Worked efficiently with a team</li>
+            </ul>
 
-            <div class="job">
-                <p><strong>Delivery Driver</strong></p>
-                <ul>
-                    <li>Managed time efficiently to meet delivery deadlines</li>
-                    <li>Provided reliable and professional service</li>
-                    <li>Developed strong independence and responsibility</li>
-                </ul>
-            </div>
+            <p><strong>Delivery Driver</strong></p>
+            <ul>
+                <li>Managed time to meet delivery deadlines</li>
+                <li>Provided reliable service</li>
+                <li>Developed responsibility and independence</li>
+            </ul>
         </div>
 
         <div class="resume-block">
             <h4>Skills</h4>
             <ul class="skills">
-                <li>Strong Work Ethic</li>
+                <li>Work Ethic</li>
                 <li>Time Management</li>
                 <li>Organization</li>
                 <li>Communication</li>
                 <li>Teamwork</li>
             </ul>
         </div>
+
     </div>
 </section>
+
+</body>
+</html>
