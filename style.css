@@ -94,8 +94,24 @@ nav a:hover {
     margin: 20px 0;
 }
 
-.logo {
-    width: 180px;
-    display: block;
-    margin: 0 auto 15px auto;
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stacks logo on top of text */
+    align-items: center;    /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically if container has height */
+    background-color: #1a1a1a; /* Matches the dark background in your image */
+    padding: 40px;
+    text-align: center;
+}
+
+.steelers-logo {
+    width: 150px;           /* Adjust size as needed */
+    margin-bottom: 20px;    /* Adds space between the logo and the title */
+}
+
+h1 {
+    color: #FFB81C;         /* Official Steelers Gold */
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
